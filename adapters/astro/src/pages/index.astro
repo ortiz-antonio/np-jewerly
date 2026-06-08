@@ -1,0 +1,14 @@
+---
+import StakeholderImpact from 'src/components/StakeholderImpact.astro'
+import Hero from '../components/Hero.astro'
+import landing from '@data/content/landing.json'
+
+import Layout from '../layouts/Layout.astro'
+import type { HeroData, StakeholderImpactData } from '@core/content/types'
+
+const { hero, impact } = landing as { hero: HeroData; impact: StakeholderImpactData }
+---
+
+<Layout>
+  <Hero data={hero} />
+</Layout>

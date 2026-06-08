@@ -1,0 +1,17 @@
+---
+import type { HeroData } from '@core/content/types'
+const { data } = Astro.props as { data: HeroData }
+---
+
+<section class="ui-section">
+  <div class="ui-section-container flex flex-col flow">
+    <h1 class="ui-text-title ui-text-title-1">EMMA</h1>
+    <div class="flex">
+      <input type="text" value="width (mm)" type="number" />
+      <input type="text" value="lenght (mm)" type="number" />
+    </div>
+
+    <input type="text" value="email" type="email" />
+    <button class="ui-button pa-xs">Generate & Email Production Vector</button>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+[project]
+name = "np-jewerly"
+title = "Np Jewerly"
+description = ""
+directory = "/home/ortiz/Dev/np-jewerly"
+
+[project.author]
+name = "Antonio Ortiz"
+username = "ortiz-antonio"
+url = "https://ortiz.studio"
+
+[project.links]
+repository = "git@github.com:ortiz-antonio/np-jewerly"
+homepage = "https://ortiz-antonio.github.io/np-jewerly"
+
+[templates]
+adapters = [ "astro" ]
+core = "core"
