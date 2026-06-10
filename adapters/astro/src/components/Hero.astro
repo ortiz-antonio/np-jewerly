@@ -6,9 +6,43 @@ const { data } = Astro.props as { data: HeroData }
 <section class="ui-section">
   <div class="ui-section-container flex flex-col flow">
     <img src={data.image} alt="Samantha Craft" width="400" class="invert" />
-    <span>Font: {data.font}</span>
-    <a href={data.image} download="production-emma.svg" class="ui-button decoration-none w-sm pa-xs"
-      >Download Production Vector</a
-    >
+
+    <h2 class="ui-text-title-2">Etsy Personalization</h2>
+    <div class="flex flex-row">
+      <input type="text" name="etsy" value="Emma + Font 4: Samantha" class="ui-text-sm pa-xs" disabled />
+      <button class="ui-button ml-xs pa-xs" type="button" data-js="copy-button"> Copy </button>
+    </div>
+
+    <h2 class="ui-text-title-2">Production</h2>
+    <a href={data.image} download="production-emma.svg" class="ui-button decoration-none w-sm pa-xs">Download Vector</a>
   </div>
 </section>
+
+<script>
+  // Buscamos todos los botones de copy en la página
+  const copyButtons = document.querySelectorAll('[data-js="copy-button"]')
+
+  copyButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault() // Evita que el formulario intente enviarse
+
+      // Buscamos el input que está justo antes del botón
+      const input = button.previousElementSibling as HTMLInputElement
+
+      if (input) {
+        // Copiamos el contenido al portapapeles
+        navigator.clipboard.writeText(input.value).then(() => {
+          // Feedback visual rápido
+          const originalText = button.textContent
+          button.textContent = 'Copied!'
+          button.classList.add('bg-success') // Si tienes una clase de éxito
+
+          setTimeout(() => {
+            button.textContent = originalText
+            button.classList.remove('bg-success')
+          }, 2000)
+        })
+      }
+    })
+  })
+</script>
