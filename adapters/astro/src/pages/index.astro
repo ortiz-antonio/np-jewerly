@@ -3,13 +3,13 @@ import Hero from '../components/Hero.astro'
 import landing from '@data/content/landing.json'
 
 import Layout from '../layouts/Layout.astro'
-import type { HeroData, StakeholderImpactData } from '@core/content/types'
+import type { HeroData } from '@core/content/types'
 import Subscription from 'src/components/Subscription.astro'
 
-const { hero, impact } = landing as { hero: HeroData; impact: StakeholderImpactData }
+const { hero } = landing as { hero: HeroData }
 ---
 
 <Layout>
   <Hero data={hero} />
-  <Subscription data={impact} />
+  <Subscription />
 </Layout>
