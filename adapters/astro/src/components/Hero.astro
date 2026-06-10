@@ -5,9 +5,9 @@ const { data } = Astro.props as { data: HeroData }
 
 <section class="ui-section">
   <div class="ui-section-container flex flex-col flow">
-    <img src="images/emma2.svg" alt="Samantha Craft" width="400" class="invert" />
-    <span>Font: Samantha Craft</span>
-    <a href="images/emma2.svg" download="production-emma.svg" class="ui-button decoration-none w-sm pa-xs"
+    <img src={data.image} alt="Samantha Craft" width="400" class="invert" />
+    <span>Font: {data.font}</span>
+    <a href={data.image} download="production-emma.svg" class="ui-button decoration-none w-sm pa-xs"
       >Download Production Vector</a
     >
   </div>
