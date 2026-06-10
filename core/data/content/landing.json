@@ -1,8 +1,14 @@
 {
   "hero": {
-    "title": "Emma - Samantha Craft",
+    "title": "Sofia - Samantha Craft",
     "text": "Name preview and download production vector",
-    "image": "images/emma2.svg",
+    "image": "images/sofia.svg",
+    "imageProduction": "images/sofia-production.svg",
+    "imageDownload": "sofia-production.svg",
     "font": "Samantha Craft"
+  },
+  "subscription": {
+    "title": "Integrate on your workflow",
+    "text": "I'm currently refining this tool with the help of artisan jewelers. If you want to help me shape it to fit your specific workflow (or just want to be notified when it's ready), let me know."
   }
 }

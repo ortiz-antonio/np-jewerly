@@ -9,12 +9,14 @@ const { data } = Astro.props as { data: HeroData }
 
     <h2 class="ui-text-title-2">Etsy Personalization</h2>
     <div class="flex flex-row">
-      <input type="text" name="etsy" value="Emma + Font 4: Samantha" class="ui-text-sm pa-xs" disabled />
+      <input type="text" name="etsy" value="Sofia + Font 4: Samantha" class="ui-text-sm pa-xs" disabled />
       <button class="ui-button ml-xs pa-xs" type="button" data-js="copy-button"> Copy </button>
     </div>
 
     <h2 class="ui-text-title-2">Production</h2>
-    <a href={data.image} download="production-emma.svg" class="ui-button decoration-none w-sm pa-xs">Download Vector</a>
+    <a href={data.imageProduction} download={data.imageDownload} class="ui-button decoration-none w-sm pa-xs"
+      >Download Vector</a
+    >
   </div>
 </section>
 
